@@ -1,3 +1,5 @@
+#ifndef STRING_PROC_H
+#define STRING_PROC_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -52,6 +54,8 @@ string_proc_list* string_proc_list_invert(string_proc_list* list);
 uint32_t str_len(char* a);
 char* str_copy(char* a);
 int32_t str_cmp(char* a, char* b);
+char wrap_around_int(int32_t value);
+char saturate_int(int32_t value);
 
 /** Operaciones sobre strings**/
 
@@ -66,3 +70,4 @@ void unsaturate_2(string_proc_key* key);
 void saturate_position(string_proc_key* key);
 void unsaturate_position(string_proc_key* key);
 
+#endif

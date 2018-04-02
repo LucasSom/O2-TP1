@@ -40,4 +40,50 @@ Encode:liqsw$mhs$hiqewmehs$pinsw$}$wi$egivge$pe$lsve$hi$hixirivrsw$e$vijpi|msrev
 Decode:hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests
 >>>>>>>>>>>>>>>> INVIRTIENDO
 Encode:hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests
-Decode:liqsw$mhs$hiqewmehs$pinsw$}$wi$egivge$pe$lsve$hi$hixirivrsw$e$vijpi|msrev$wsfvi$psw$xiwxw
+Decode:liqsw$mhs$hiqewmehs$pinsw$}$wi$egivge$pe$lsve$hi$hixirivrsw$e$vijpi|msrev$wsfvi$psw$xiwxwora de
+>>>>>>>>>>>>>>>> PROBANDO LENGTH
+0
+2
+4
+6
+>>>>>>>>>>>>>>>> PROBANDO ADD NODE AT
+List length:3
+	node type:irreversible
+	node type:reversible
+	node type:irreversible
+List length:4
+	node type:irreversible
+	node type:reversible
+	node type:irreversible
+	node type:irreversible
+List length:4
+	node type:irreversible
+	node type:reversible
+	node type:irreversible
+	node type:irreversible
+>>>>>>>>>>>>>>>> PROBANDO REMOVE NODE AT
+List length:3
+	node type:irreversible
+	node type:reversible
+	node type:irreversible
+List length:2
+	node type:reversible
+	node type:irreversible
+List length:1
+	node type:reversible
+>>>>>>>>>>>>>>>> PROBANDO INVERT ORDER
+List length:4
+	node type:reversible
+	node type:irreversible
+	node type:reversible
+	node type:irreversible
+List length:4
+	node type:reversible
+	node type:irreversible
+	node type:reversible
+	node type:irreversible
+>>>>>>>>>>>>>>>> PROBANDO ODD PRIME
+Encode:hgmqs"ifo"dgmcskafo"lgjqs"y"sg ccgrea"lc jota"dg fevepetnqs"a"rgfneziqncr"sqbte"lqs"tgsvs
+Decode:hcmmsibodcm_sgabolcjmsysc _ccraal_ fopadc berelepnmsarcfjevimn_rsmbpelmstcsrs
+Encode:heors%iko dpmnsiauo3lej†s y s‚ €cercaEla ‘oa d” dete£ernos[a]refle»ion¨risobreolosstestsY
+Decode:heklsi]o dZmTsiaSolejXs y sH Bcercaûla ?oGa d6 dete9ernosåaãrefle5ionr×sobreÑlosÍtests§

@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <math.h>
 #include "string_processor.h"
+#include "string_processor_utils.h"
 
 #define FILE_OP(filename, x) pFile = fopen ( filename, "a" ); x fclose( pFile );
 #define TEST_N	300
@@ -127,6 +128,70 @@ void test_1_element(){
 	FILE_OP(filename_1,string_proc_list_decode(inverted_list, "hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests", pFile);)
 	FILE_OP(filename_1,fputs( "\n", pFile );)
 	string_proc_list_destroy(inverted_list);
+	string_proc_list_destroy(list);
+	FILE_OP(filename_1,fputs( ">>>>>>>>>>>>>>>> PROBANDO LENGTH\n", pFile );)
+	list = string_proc_list_create("lista_test_length");
+	FILE_OP(filename_1,fprintf(pFile, "%d\n", string_proc_list_length(list));)
+	string_proc_list_add_node(list, shift_2, unshift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	FILE_OP(filename_1,fprintf(pFile, "%d\n", string_proc_list_length(list));)
+	string_proc_list_add_node(list, shift_2, unshift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	FILE_OP(filename_1,fprintf(pFile, "%d\n", string_proc_list_length(list));)
+	string_proc_list_add_node(list, shift_2, unshift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	FILE_OP(filename_1,fprintf(pFile, "%d\n", string_proc_list_length(list));)	
+	string_proc_list_destroy(list);
+	FILE_OP(filename_1,fputs( ">>>>>>>>>>>>>>>> PROBANDO ADD NODE AT\n", pFile );)
+	list = string_proc_list_create("lista_test_add_node");
+	string_proc_list_add_node(list, shift_2, unshift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	string_proc_list_add_node_at(list, saturate_2, saturate_2, IRREVERSIBLE, 0);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_add_node_at(list, saturate_2, saturate_2, IRREVERSIBLE, 3);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_add_node_at(list, saturate_2, saturate_2, IRREVERSIBLE, 6);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_destroy(list);
+	FILE_OP(filename_1,fputs( ">>>>>>>>>>>>>>>> PROBANDO REMOVE NODE AT\n", pFile );)
+	list = string_proc_list_create("lista_remove_node");
+	string_proc_list_add_node(list, shift_2, unshift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	string_proc_list_add_node_at(list, saturate_2, saturate_2, IRREVERSIBLE, 0);
+	string_proc_list_add_node_at(list, saturate_2, saturate_2, IRREVERSIBLE, 3);
+	string_proc_list_remove_node_at(list, 3);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_remove_node_at(list, 0);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_remove_node_at(list, 1);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_destroy(list);
+	FILE_OP(filename_1,fputs( ">>>>>>>>>>>>>>>> PROBANDO INVERT ORDER\n", pFile );)
+	list = string_proc_list_create("lista_invert_order");
+	string_proc_list_add_node(list, shift_2, unshift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	string_proc_list_add_node(list, unshift_2, shift_2, REVERSIBLE);
+	string_proc_list_add_node(list, saturate_2, saturate_2, IRREVERSIBLE);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list* inverted_order_list	= string_proc_list_invert_order(list);
+	FILE_OP(filename_1,string_proc_list_print(list, pFile);)
+	string_proc_list_destroy(inverted_order_list);
+	string_proc_list_destroy(list);
+	FILE_OP(filename_1,fputs( ">>>>>>>>>>>>>>>> PROBANDO ODD PRIME\n", pFile );)
+	list = string_proc_list_create("lista_odd_prime");
+	string_proc_list_add_node(list, saturate_2_odd, unsaturate_2_odd, IRREVERSIBLE);
+	FILE_OP(filename_1,fputs( "Encode:", pFile );)
+	FILE_OP(filename_1,string_proc_list_encode(list, "hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests", pFile);)
+	FILE_OP(filename_1,fputs( "\nDecode:", pFile );)
+	FILE_OP(filename_1,string_proc_list_decode(list, "hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests", pFile);)
+	string_proc_list_destroy(list);
+	list = string_proc_list_create("lista_odd_prime");
+	string_proc_list_add_node(list, shift_position_prime, unshift_position_prime, REVERSIBLE);
+	FILE_OP(filename_1,fputs( "\nEncode:", pFile );)
+	FILE_OP(filename_1,string_proc_list_encode(list, "hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests", pFile);)
+	FILE_OP(filename_1,fputs( "\nDecode:", pFile );)
+	FILE_OP(filename_1,string_proc_list_decode(list, "hemos ido demasiado lejos y se acerca la hora de detenernos a reflexionar sobre los tests", pFile);)
+	FILE_OP(filename_1,fputs( "\n", pFile );)
 	string_proc_list_destroy(list);
 }
 
