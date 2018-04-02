@@ -1,0 +1,18 @@
+-CREAR LISTA:
+Chanchada en línea 49 a 54
+
+-¿Para qué sirve el %define NULL que pusieron si no se puede usar?
+
+-BORRAR LISTA:
+¿Llamo bien al free? Ie, a free le tengo que pasar el ptr de lo que quiero borrar, ¿no?
+¿Cómo llamo a una función dentro de asm? ¿Directamente con JMP función?
+
+-CREAR NODO:
+¿En qué lugar de la lista va el nuevo nodo? ¿Dónde está ese dato?
+
+-BORRAR NODO:
+Chanchada en líneas 128 a 130
+¿Cómo accedo a la lista? O sea, si es el primer o último nodo, ¿cómo hago?
+¿Están bien las llamadas a free de 138 y ss.?
+
+-La compu esta tiene chip de 32 bits. ¿Puedo bajarme un emulador de 64 o algo así?
