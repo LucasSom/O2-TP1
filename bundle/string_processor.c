@@ -243,3 +243,52 @@ void unsaturate_position(string_proc_key* key){
 		key->value[i] = saturate_int(((int32_t)key->value[i]) - i);
 	}
 }
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+uint32_t string_proc_list_length(string_proc_list* list){
+	uint32_t length	= 0;
+	string_proc_node* current_node	= list->first;
+	while(current_node != NULL){
+		++length;
+		current_node = current_node->next;
+	}
+	return length;
+}
+
+bool string_proc_list_add_node_at(string_proc_list* list, string_proc_func f, string_proc_func
+g, string_proc_func_type type, uint32_t index){
+	//TO DO
+	}
+
+bool string_proc_list_remove_node_at(string_proc_list* list, uint32_t index){
+	//TO DO
+	}
+
+string_proc_list* string_proc_list_invert_order(string_proc_list* list){
+	//TO DO
+	}
+
+void string_proc_list_apply_print_trace(string_proc_list* list, string_proc_key* key, bool encode,
+FILE* file){
+	//TO DO
+	}
+
+void saturate_2_odd(string_proc_key* key){
+	//TO DO
+	}
+
+void unsaturate_2_odd(string_proc_key* key){
+	//TO DO
+	}
+
+void shift_position_prime(string_proc_key* key){
+	//TO DO
+	}
+
+void unshift_position_prime(string_proc_key* key){
+	//TO DO
+	}
